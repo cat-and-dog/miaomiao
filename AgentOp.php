@@ -179,6 +179,19 @@ class Openapi_AgentOp extends BaseController{
 				exit();
 			}
 	}
+	
+	// A:  userName  agentId
+
+	// B:	agentId agentName 
+
+	// select * from a where userName like '%queryStr%'
+
+	// select agentId from B where agentId like  '%%' or agentName like '%%';
+
+	// select userName,agentId from A where userName like '%%' or agentId in ();
+
+	// select agentId,agentName from B where agentId in ();
+
 	public function userAgentQryByKey(){
 		$key=$this->getParams('key');
 		$userNames = array();
